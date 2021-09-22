@@ -1,0 +1,9 @@
+name: text-to-image-generation-env
+
+dependencies:
+  - matplotlib
+  - numpy
+  - pandas
+  - pip
+  - python
+  - scikit-learn
