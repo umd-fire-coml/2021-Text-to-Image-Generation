@@ -4,12 +4,10 @@ import pandas as pd
 class EnvironmentCheck:
     
     def checkMatPlotVers():
-        print(matplotlib.__version__)
+        return matplotlib.__version__
 
     def checkNPVers():
-        print(np.__version__)
+        return np.__version__
     
     def checkPandasVers():
-        print(pd.__version__)
-
-    
+        return pd.__version__   
