@@ -1,6 +1,6 @@
 name: run_all_tests
 
-on: [push, pull_request, workflow_dospatch]
+on: [push, pull_request, workflow_dispatch]
 
 jobs:
   RunAllTests:
