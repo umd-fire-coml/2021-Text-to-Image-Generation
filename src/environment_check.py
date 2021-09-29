@@ -1,7 +1,7 @@
+import matplotlib
+import numpy as np
+import pandas as pd
 class EnvironmentCheck:
-    import matplotlib
-    import numpy as np
-    import pandas as pd
     
     def checkMatPlotVers():
         print(matplotlib.__version__)
