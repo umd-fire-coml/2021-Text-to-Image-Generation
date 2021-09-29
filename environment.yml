@@ -1,5 +1,5 @@
 name: text-to-image-generation-env
-
+# TODO: need to mention specific version numbers- check which ones we want to use
 dependencies:
   - matplotlib
   - numpy
@@ -7,3 +7,4 @@ dependencies:
   - pip
   - python
   - scikit-learn
+  - pytest
