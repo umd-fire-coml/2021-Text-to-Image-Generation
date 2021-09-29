@@ -1,4 +1,4 @@
-from environment_check import EnvironmentCheck
+from src.environment_check import EnvironmentCheck
 
 def test_mat_plot_vers():
     assert(EnvironmentCheck.checkMatPlotVers == "3.3.4")
