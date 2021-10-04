@@ -2,7 +2,8 @@
 
 # Get Started
 
-## Set Up Conda environment
+## Set Up Python virtual environment
 ```bash
-conda env create --prefix ./env --file environment.yml --force
+pip install -r requirements.txt
+pip install -r test-requirements.txt
 ```
