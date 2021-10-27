@@ -1,9 +1,13 @@
 name: text-to-image-generation-env
 
 dependencies:
+  - pytest
   - matplotlib
   - numpy
   - pandas
   - pip
   - python
   - scikit-learn
+  - tensorflow
+  - jupyterlab
+  - opencv
