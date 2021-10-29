@@ -11,19 +11,19 @@ def build_discriminator():
     input_layer = Input(shape=image_shape)
 
     x = Conv2D(64, text_encod_shape[:2],
-               padding='same', strides=2,
+               padding='same', strides=2, kernel_initializer='random_normal',
                input_shape=image_shape, use_bias=False)(input_layer)
     x = LeakyReLU(alpha=0.2)(x)
 
-    x = Conv2D(128, text_encod_shape[:2], padding='same', strides=2, use_bias=False)(x)
+    x = Conv2D(128, text_encod_shape[:2], padding='same', strides=2, kernel_initializer='random_normal', use_bias=False)(x)
     x = BatchNormalization()(x)
     x = LeakyReLU(alpha=0.2)(x)
 
-    x = Conv2D(256, text_encod_shape[:2], padding='same', strides=4, use_bias=False)(x)
+    x = Conv2D(256, text_encod_shape[:2], padding='same', strides=4, kernel_initializer='random_normal', use_bias=False)(x)
     x = BatchNormalization()(x)
     x = LeakyReLU(alpha=0.2)(x)
 
-    x = Conv2D(512, text_encod_shape[:2], padding='same', strides=4, use_bias=False)(x)
+    x = Conv2D(512, text_encod_shape[:2], padding='same', strides=4, kernel_initializer='random_normal', use_bias=False)(x)
     x = BatchNormalization()(x)
     x = LeakyReLU(alpha=0.2)(x)
 
@@ -31,7 +31,7 @@ def build_discriminator():
 
     merged_input = concatenate([x, input_layer2])
 
-    x2 = Conv2D(64 * 8, kernel_size=1,
+    x2 = Conv2D(64 * 8, kernel_size=1, kernel_initializer='random_normal',
                 padding="same", strides=1)(merged_input)
     x2 = BatchNormalization()(x2)
     x2 = LeakyReLU(alpha=0.2)(x2)
