@@ -11,3 +11,5 @@ dependencies:
   - tensorflow
   - jupyterlab
   - opencv
+  - pillow
+  - keras

@@ -3,8 +3,8 @@ import pickle
 import random
 import time
 
-import PIL
 import numpy as np
+import PIL
 import pandas as pd
 import tensorflow as tf
 from PIL import Image
@@ -20,6 +20,8 @@ def load_class_ids(class_info_file_path):
     """
     Load class ids from class_info.pickle file
     """
+    data = open(class_info_file_path).read().replace('\r\n', '\n')
+    dst = class_info_file_path + ".tmp"
     with open(class_info_file_path, 'rb') as f:
         class_ids = pickle.load(f, encoding='latin1')
         return class_ids
@@ -283,15 +285,19 @@ def write_log(callback, name, loss, batch_no):
     """
     Write training summary to TensorBoard
     """
-    summary = tf.Summary()
-    summary_value = summary.value.add()
-    summary_value.simple_value = loss
-    summary_value.tag = name
-    callback.writer.add_summary(summary, batch_no)
-    callback.writer.flush()
+    callback.writer = tf.summary.create_file_writer("mylogs");
+    with callback.writer.as_default():
+        tf.summary.scalar(name, loss, step=batch_no)
+        callback.writer.flush()
+    #summary = tf.Summary()
+    #summary_value = summary.value.add()
+    #summary_value.simple_value = loss
+    #summary_value.tag = name
+    #callback.writer.add_summary(summary, batch_no)
+    #callback.writer.flush()
 
 if __name__ == '__main__':
-    data_dir = "/content/birds/"
+    data_dir = "birds/"
     train_dir = data_dir + "/train"
     test_dir = data_dir + "/test"
     image_size = 64
@@ -312,7 +318,7 @@ if __name__ == '__main__':
     class_info_file_path_train = train_dir + "/class_info.pickle"
     class_info_file_path_test = test_dir + "/class_info.pickle"
 
-    cub_dataset_dir = "/content/CUB_200_2011"
+    cub_dataset_dir = "CUB_200_2011"
     
     # Define optimizers
     dis_optimizer = Adam(lr=stage1_discriminator_lr, beta_1=0.5, beta_2=0.999)
