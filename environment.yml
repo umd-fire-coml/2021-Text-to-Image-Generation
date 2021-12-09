@@ -1,6 +1,7 @@
 name: text-to-image-generation-env
 
 dependencies:
+  - pillow
   - pytest
   - matplotlib
   - numpy
@@ -11,5 +12,4 @@ dependencies:
   - tensorflow
   - jupyterlab
   - opencv
-  - pillow
-  - keras
+  
