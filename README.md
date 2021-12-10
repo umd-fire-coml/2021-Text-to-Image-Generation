@@ -2,7 +2,7 @@
 # Description
 This project is our own implementataion of text-to-image generation for birds. Based off of descirpiton provided by the user, it tries to create an original bird image. It runs in Python 3 and uses a target-aware generative averserial model.
 # Video Demonstration
-
+youtube.com/watch?v=FgwgQJRBPAc
 # Colab Notebook
 https://colab.research.google.com/drive/1mfxWs4v8WekAs4snLyXvPenQz0g7b2ZY?usp=sharing
 # Installing the Environment
