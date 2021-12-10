@@ -2,7 +2,7 @@
 
 # 2021-Text-to-Image-Generation
 # Description
-This project is our own implementataion of text-to-image generation for birds. Based off of descirpiton provided by the user, it tries to create its own bird. It runs off of Python 3 and uses GAN to train data.
+This project is our own implementataion of text-to-image generation for birds. Based off of descirpiton provided by the user, it tries to create an original bird image. It runs in Python 3 and uses a target-aware generative averserial model.
 # Video Demonstration
 
 # Colab Test and Visualization
@@ -33,7 +33,7 @@ File use to install the required libraries.
 ```
 test
 ```
-Tests use during code development.
+Tests use during 
 ```
 requirements.txt
 ```
@@ -57,3 +57,4 @@ To begin training with the dataset we used, run `python model.py`. It checks if 
 # Testing Model
 
 # References
+Han Zhang, Tao Xu, Hongsheng Li, Shaoting Zhang, Xiaogang Wang, Xiaolei Huang, and Dimitrius Metaxas. StackGAN: Text to Photo-realistic Image Synthesis with Stacked Generative Adversarial Networks," arXiv, August 5, 2017. [Online]. Available: https://arxiv.org/abs/1612.03242v2. [Accessed December 06, 2021]
