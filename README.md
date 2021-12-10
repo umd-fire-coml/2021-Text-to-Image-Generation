@@ -1,3 +1,5 @@
+# midnight struggle hrs can I get an amen
+
 # Description
 This project is our own implementataion of text-to-image generation for birds. Based off of descirpiton provided by the user, it tries to create its own bird. It runs off of Python 3 and uses the PyTorch model to train and test data.
 # Video Demonstration
