@@ -9,7 +9,8 @@ dependencies:
   - pip
   - python
   - scikit-learn
-  - tensorflow
+  - tensorflow-gpu
   - jupyterlab
   - opencv
-  
+  - keras
+  - gdown
