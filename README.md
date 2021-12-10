@@ -1,5 +1,6 @@
 # midnight struggle hrs can I get an amen
 
+# 2021-Text-to-Image-Generation
 # Description
 This project is our own implementataion of text-to-image generation for birds. Based off of descirpiton provided by the user, it tries to create its own bird. It runs off of Python 3 and uses GAN to train data.
 # Video Demonstration
@@ -9,17 +10,16 @@ This project is our own implementataion of text-to-image generation for birds. B
 # Installing the Environment
 After cloning the github, change directory into it. If using anaconda, run command 
 ```
-conda env create --prefix ./env --file environment.yml
+conda env create environment.yml
 conda acivate text-to-image-generation-env
 ``` 
-into the console to activate the yaml file with all the required libraries.
+into the console to activate the yaml file with all the required libraries. Additionally, install `gdown` in the comand prompt after activating the environment 
 # Directory Guide
+birds
 
 
-# Training Data
-To train your own data, first encode the text that captions your image dataset. To encode your own text use [this](https://github.com/elvisyjlin/skip-thoughts) github that provides a translated to Python 3 version of the skip-thoughtstext encoder.
-
-The text and images of the birds dataset can be found [here](https://drive.google.com/drive/folders/1Ai4x3CQDdI8Jb2teCDjzh6VAU_nXtxrv?usp=sharing)
+# Obtaining and Training Dataset
+To begin training with the dataset we used, run `python model.py`. It checks if the CUB_200_2011 directory that contains the dataset exists, and if not, downloads and sets up the directory for it. The model trains the data, and saves them in the current directory.
 # Testing Model
 
-# Citation
+# References
